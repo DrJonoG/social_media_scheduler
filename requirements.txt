@@ -1,0 +1,11 @@
+streamlit
+requests
+python-dotenv
+apscheduler
+requests-oauthlib
+mysql-connector-python
+anthropic
+tweepy
+google-genai
+pillow
+urllib3
