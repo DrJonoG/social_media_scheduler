@@ -7,8 +7,6 @@
 
 > A unified platform for scheduling and publishing content across multiple social media platforms. Manage Facebook, Instagram, Pinterest, Tumblr, X (Twitter), and more from a single dashboard with AI-powered content enhancement.
 
-![Social Media Scheduler Demo](https://via.placeholder.com/800x400/1f2937/ffffff?text=Social+Media+Scheduler+Dashboard)
-
 ---
 
 ## 📑 Table of Contents
