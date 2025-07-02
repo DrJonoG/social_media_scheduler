@@ -62,9 +62,10 @@
 
 ### Screenshots
 
-| Dashboard | Platform Selection | AI Enhancement |
-|-----------|-------------------|----------------|
-| ![Dashboard](https://via.placeholder.com/250x150/3b82f6/ffffff?text=Dashboard) | ![Platform Selection](https://via.placeholder.com/250x150/10b981/ffffff?text=Platforms) | ![AI Tools](https://via.placeholder.com/250x150/f59e0b/ffffff?text=AI+Tools) |
+| Main Dashboard | Content Creation Interface |
+|----------------|---------------------------|
+| ![Dashboard Overview](media/screenshot_1.png) | ![Content Creation](media/screenshot_2.png) |
+| *Multi-platform selection, status dashboard, and real-time connection monitoring* | *AI-powered content enhancement, media upload, and smart scheduling* |
 
 ---
 
