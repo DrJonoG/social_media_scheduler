@@ -78,8 +78,8 @@
 | **X (Twitter)** | ✅ Live | Text, media, threads | OAuth 2.0 + PKCE |
 | **TikTok** | 🚧 Planned | Business accounts, videos | OAuth 2.0 |
 | **Threads** | ⏳ Waiting | Text, media posts | Meta API (pending) |
-| **LinkedIn** | 📋 Roadmap | Professional content | OAuth 2.0 |
-
+| **LinkedIn** | 🚧 Planned | Professional content | OAuth 2.0 |
+| **Personal Blog** | 🚧 Planned | Text, media | TBD |
 ---
 
 ## Features to add:
@@ -156,7 +156,7 @@ Get up and running in 5 minutes:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/yourusername/social-media-scheduler.git
+git clone https://github.com/DrJonoG/social-media-scheduler.git
 cd social-media-scheduler
 
 # 2. Install dependencies
@@ -186,7 +186,7 @@ Open `http://localhost:8501` and start scheduling! 🎉
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/social-media-scheduler.git
+git clone https://github.com/DrJonoG/social-media-scheduler.git
 cd social-media-scheduler
 
 # Create virtual environment (recommended)
@@ -314,7 +314,7 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 
 ```bash
 # Clone your fork
-git clone https://github.com/yourusername/social-media-scheduler.git
+git clone https://github.com/DrJonoG/social-media-scheduler.git
 
 # Install development dependencies
 pip install -r requirements-dev.txt
@@ -334,15 +334,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 💬 Support
 
 - **Documentation**: [Full documentation](https://docs.example.com) 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/social-media-scheduler/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/social-media-scheduler/discussions)
-- **Email**: support@example.com
+- **Issues**: [GitHub Issues](https://github.com/DrJonoG/social-media-scheduler/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/DrJonoG/social-media-scheduler/discussions)
 
 ---
 
 ## 🌟 Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=yourusername/social-media-scheduler&type=Date)](https://star-history.com/#yourusername/social-media-scheduler&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=DrJonoG/social-media-scheduler&type=Date)](https://star-history.com/#DrJonoG/social-media-scheduler&Date)
 
 ---
 
