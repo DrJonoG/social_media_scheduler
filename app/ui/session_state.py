@@ -17,6 +17,12 @@ def initialize_session_state():
     if 'text' not in st.session_state:
         st.session_state.text = ""
     
+    # Widget state (initialize to match content state)
+    if 'title_input' not in st.session_state:
+        st.session_state.title_input = st.session_state.title
+    if 'text_area_input' not in st.session_state:
+        st.session_state.text_area_input = st.session_state.text
+    
     # UI preferences
     if 'selected_platforms' not in st.session_state:
         st.session_state.selected_platforms = ["Facebook"]
@@ -40,6 +46,11 @@ def clear_content():
     """Clear all content from the form (title and text)."""
     st.session_state.title = ""
     st.session_state.text = ""
+    # Also clear the widget states if they exist
+    if 'title_input' in st.session_state:
+        st.session_state.title_input = ""
+    if 'text_area_input' in st.session_state:
+        st.session_state.text_area_input = ""
     st.session_state.clear_counter += 1
 
 
@@ -56,12 +67,18 @@ def set_ai_processing_state(is_processing: bool):
 def update_text_content(new_text: str):
     """Update the text content and force UI refresh."""
     st.session_state.text = new_text
+    # Also update the text area widget directly if it exists
+    if 'text_area_input' in st.session_state:
+        st.session_state.text_area_input = new_text
     st.session_state.clear_counter += 1
 
 
 def update_title_content(new_title: str):
     """Update the title content and force UI refresh."""
     st.session_state.title = new_title
+    # Also update the title widget directly if it exists
+    if 'title_input' in st.session_state:
+        st.session_state.title_input = new_title
     st.session_state.clear_counter += 1
 
 

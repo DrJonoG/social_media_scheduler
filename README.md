@@ -76,7 +76,7 @@
 | **Pinterest** | ✅ Live | Boards, pins, image optimisation | OAuth 2.0 |
 | **Tumblr** | ✅ Live | Multiple post types, blogs | OAuth 1.0a |
 | **X (Twitter)** | ✅ Live | Text, media, threads | OAuth 2.0 + PKCE |
-| **TikTok** | 🚧 Planned | Business accounts, videos | OAuth 2.0 |
+| **TikTok** | ✅ Live | Business accounts, videos | OAuth 2.0 |
 | **Threads** | ⏳ Waiting | Text, media posts | Meta API (pending) |
 | **LinkedIn** | 🚧 Planned | Professional content | OAuth 2.0 |
 | **Personal Blog** | 🚧 Planned | Text, media | TBD |
@@ -235,6 +235,9 @@ python scripts/tumblr_setup.py
 
 # X (Twitter)
 python scripts/x_setup.py
+
+# TikTok
+python scripts/tiktok_setup.py
 ```
 
 ### 3. Database Setup (Optional)
@@ -333,7 +336,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 💬 Support
 
-- **Documentation**: [Full documentation](https://docs.example.com) 
 - **Issues**: [GitHub Issues](https://github.com/DrJonoG/social-media-scheduler/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/DrJonoG/social-media-scheduler/discussions)
 

@@ -11,8 +11,8 @@ if project_root not in sys.path:
 
 from app.ui.session_state import (
     initialize_session_state, clear_content, set_posting_state,
-    set_ai_processing_state, update_text_content, is_any_operation_in_progress,
-    get_form_key_suffix, get_session_debug_info
+    set_ai_processing_state, update_text_content, update_title_content,
+    is_any_operation_in_progress, get_form_key_suffix, get_session_debug_info
 )
 
 try:
@@ -318,12 +318,17 @@ with col_main:
     with st.container(border=True):
         st.markdown('<div class="section-marker"></div><div class="section-title">📝 Post Title</div>', unsafe_allow_html=True)
         
-        st.session_state.title = st.text_input(
+        # Use a callback to properly handle title changes
+        def update_title_callback():
+            st.session_state.title = st.session_state.title_input
+        
+        st.text_input(
             "Post Title", 
             value=st.session_state.title, 
-            key=f"title_input{get_form_key_suffix()}",
+            key="title_input",
             placeholder="Enter your post title here...",
-            help="Create an engaging title for your post"
+            help="Create an engaging title for your post",
+            on_change=update_title_callback
         )
         
         # AI Title Generation Buttons
@@ -342,7 +347,7 @@ with col_main:
                     with st.spinner("🎯 Generating engaging title..."):
                         new_title = process_text_with_ai(st.session_state.text, "generate_title")
                         if new_title and new_title != st.session_state.text:
-                            st.session_state.title = new_title
+                            update_title_content(new_title)
                             st.success("✅ Title generated successfully!")
                         else:
                             st.error("❌ Failed to generate title. Please try again.")
@@ -356,13 +361,18 @@ with col_main:
     with st.container(border=True):
         st.markdown('<div class="section-marker"></div><div class="section-title">✍️ Post Content</div>', unsafe_allow_html=True)
         
-        st.session_state.text = st.text_area(
+        # Use a callback to properly handle text area changes
+        def update_text_callback():
+            st.session_state.text = st.session_state.text_area_input
+        
+        st.text_area(
             "Content", 
             value=st.session_state.text, 
             height=200, 
-            key=f"text_input{get_form_key_suffix()}",
+            key="text_area_input",
             placeholder="Write your post content here. Be creative and engaging!",
-            help="Write compelling content that resonates with your audience"
+            help="Write compelling content that resonates with your audience",
+            on_change=update_text_callback
         )
 
         # AI Enhancement Buttons

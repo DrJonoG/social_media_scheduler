@@ -3,7 +3,7 @@
 ```
 app/                     # Core application logic and components
   auth/                  # OAuth authentication and token management
-  platforms/             # Social media platform API wrappers (Facebook, Instagram, X, etc.)
+  platforms/             # Social media platform API wrappers (Facebook, Instagram, X, TikTok, etc.)
   ai/                    # AI/LLM service APIs (Anthropic, OpenAI, Gemini)
   scheduler/             # Logic for scheduling and executing timed post publishing
   ui/                    # Web interface components (built with Streamlit)
@@ -26,6 +26,7 @@ scripts/                 # Setup and utility scripts
   pinterest_setup.py     # Pinterest OAuth2 authentication and board setup
   tumblr_setup.py        # Tumblr OAuth 1.0a authentication and blog setup
   x_setup.py             # X (Twitter) OAuth 2.0 with PKCE authentication setup
+  tiktok_setup.py        # TikTok OAuth 2.0 authentication and account setup
 
 setup/                   # Setup and usage guides
   facebook-auth-setup.md # Step-by-step Facebook authentication guide
@@ -33,6 +34,7 @@ setup/                   # Setup and usage guides
   pinterest-auth-setup.md # Step-by-step Pinterest authentication guide
   tumblr-auth-setup.md   # Step-by-step Tumblr OAuth 1.0a setup guide
   x-auth-setup.md        # Step-by-step X (Twitter) OAuth 2.0 setup guide
+  tiktok-auth-setup.md   # Step-by-step TikTok OAuth 2.0 setup guide
   database-structure.md  # Database schema and setup information
 
 # Root Files

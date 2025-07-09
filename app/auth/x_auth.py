@@ -265,11 +265,11 @@ def save_x_credentials(credentials):
             expires_at
         ))
     else:
-        # Save to file
-        credentials_dir = "data/credentials"
-        os.makedirs(credentials_dir, exist_ok=True)
+        # Save to file in secure directory (consistent with other platforms)
+        secure_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "secure")
+        os.makedirs(secure_dir, exist_ok=True)
         
-        credentials_file = os.path.join(credentials_dir, "x_credentials.json")
+        credentials_file = os.path.join(secure_dir, "x_token.json")
         
         with open(credentials_file, 'w') as f:
             json.dump(credentials, f, indent=2, default=str)
@@ -312,7 +312,8 @@ def load_x_credentials():
             print(f"⚠️  Database error, falling back to file: {e}")
         
         # Fallback to file if database failed or had no credentials
-        credentials_file = "data/credentials/x_credentials.json"
+        secure_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "secure")
+        credentials_file = os.path.join(secure_dir, "x_token.json")
         
         if os.path.exists(credentials_file):
             try:
@@ -328,8 +329,9 @@ def load_x_credentials():
         return None
     
     else:
-        # Database disabled - only try file
-        credentials_file = "data/credentials/x_credentials.json"
+        # Database disabled - only try file in secure directory
+        secure_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "secure")
+        credentials_file = os.path.join(secure_dir, "x_token.json")
         
         if os.path.exists(credentials_file):
             try:
